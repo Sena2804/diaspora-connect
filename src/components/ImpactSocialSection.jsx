@@ -68,10 +68,10 @@ const ImpactSocialSection = () => {
         </div>
 
         {/* Statistique principale */}
-        <div className="bg-gradient-to-r from-emerald/10 to-emerald-light/20 dark:from-slate-900/40 dark:to-slate-900/20 border-2 border-emerald rounded-2xl p-8 md:p-12 mb-16">
+        <div className="bg-gradient-to-r from-emerald/10 to-emerald-light/20 dark:from-slate-900/40 dark:to-slate-900/20 border-2 border-emerald rounded-2xl p-6 sm:p-8 md:p-12 mb-16">
           <div className="text-center">
-            <p className="text-6xl md:text-7xl font-bold gradient-text mb-4">60%</p>
-            <p className="text-xl text-gray-700 dark:text-gray-300">
+            <p className="text-5xl sm:text-6xl md:text-7xl font-bold gradient-text mb-4">60%</p>
+            <p className="text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300">
               Estimation : 60% des ménages ruraux béninois dépendent des transferts de la diaspora
               <span className="block text-lg mt-2 text-gray-600 dark:text-gray-400">
                 pour couvrir leurs besoins essentiels
@@ -82,22 +82,22 @@ const ImpactSocialSection = () => {
 
         {/* Utilisation des fonds */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white mb-8">Où vont les transferts ?</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h3 className="text-xl sm:text-2xl font-bold text-navy dark:text-slate-100 mb-8">Où vont les transferts ?</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {impactAreas.map((area, index) => {
               const Icon = area.icon
               return (
                 <div
                   key={index}
-                  className="card-hover bg-gradient-to-br from-emerald/5 to-navy/5 dark:from-emerald-900/20 dark:to-slate-900/40 border border-emerald/20 dark:border-slate-700 rounded-xl p-6"
+                  className="card-hover bg-gradient-to-br from-emerald/5 to-navy/5 dark:from-emerald-900/20 dark:to-slate-900/40 border border-emerald/20 dark:border-slate-700 rounded-xl p-4 sm:p-6"
                 >
-                  <div className="flex items-center gap-3 mb-4">
+                  <div className="flex flex-col items-center sm:items-start gap-2 sm:gap-3 mb-4">
                     <div className="bg-emerald/20 dark:bg-emerald-900/30 rounded-lg p-2">
                       <Icon className="w-5 h-5 text-emerald" />
                     </div>
-                    <span className="text-3xl font-bold text-emerald">{area.percentage}</span>
+                    <span className="text-2xl sm:text-3xl font-bold text-emerald">{area.percentage}</span>
                   </div>
-                  <h4 className="text-lg font-bold text-navy dark:text-slate-100 mb-2">{area.title}</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-navy dark:text-slate-100 mb-2 text-center sm:text-left">{area.title}</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">{area.description}</p>
                 </div>
               )
@@ -144,33 +144,33 @@ const ImpactSocialSection = () => {
         </div>
 
         {/* Bénéfices directs */}
-        <div className="rounded-[2rem] border border-emerald/10 bg-white p-8 shadow-xl dark:bg-slate-900 dark:border-slate-700 mb-16">
-          <h3 className="text-2xl font-bold mb-8">Bénéfices Directs de Diaspora Connect</h3>
+        <div className="rounded-[2rem] border border-emerald/10 bg-white p-4 sm:p-8 shadow-xl dark:bg-slate-900 dark:border-slate-700 mb-16">
+          <h3 className="text-xl sm:text-2xl font-bold text-navy dark:text-slate-100 mb-6 sm:mb-8">Bénéfices Directs de Diaspora Connect</h3>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="border-t-4 border-emerald pt-6">
-              <p className="text-4xl font-bold text-emerald mb-2">+450K</p>
-              <p className="text-gray-300">Enfants scolarisés supplémentaires par an</p>
-              <p className="text-xs text-gray-400 mt-2">Grâce aux frais réduits</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
+            <div className="border-t-4 border-emerald pt-4 sm:pt-6">
+              <p className="text-3xl sm:text-4xl font-bold text-emerald mb-2">+450K</p>
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">Enfants scolarisés supplémentaires par an</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">Grâce aux frais réduits</p>
             </div>
-            <div className="border-t-4 border-emerald pt-6">
-              <p className="text-4xl font-bold text-emerald mb-2">+200K</p>
-              <p className="text-gray-300">Familles sortant de la pauvreté</p>
-              <p className="text-xs text-gray-400 mt-2">Investissements plus élevés</p>
+            <div className="border-t-4 border-emerald pt-4 sm:pt-6">
+              <p className="text-3xl sm:text-4xl font-bold text-emerald mb-2">+200K</p>
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">Familles sortant de la pauvreté</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">Investissements plus élevés</p>
             </div>
-            <div className="border-t-4 border-emerald pt-6">
-              <p className="text-4xl font-bold text-emerald mb-2">+15M FCFA</p>
-              <p className="text-gray-300">Investis en entrepreneuriat local</p>
-              <p className="text-xs text-gray-400 mt-2">Création d'emplois</p>
+            <div className="border-t-4 border-emerald pt-4 sm:pt-6">
+              <p className="text-3xl sm:text-4xl font-bold text-emerald mb-2">+15M FCFA</p>
+              <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">Investis en entrepreneuriat local</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">Création d'emplois</p>
             </div>
           </div>
         </div>
 
         {/* Témoignages / Stories */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white mb-8">Histoires Réelles</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-navy dark:text-slate-100 mb-6 sm:mb-8">Histoires Réelles</h3>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
             {/* Story 1 */}
             <div className="bg-white dark:bg-slate-900 border-l-4 border-emerald rounded-xl p-6 shadow-md dark:shadow-none">
               <div className="flex items-center gap-3 mb-4">
@@ -216,7 +216,7 @@ const ImpactSocialSection = () => {
         {/* Appel à l'action */}
         <div className="bg-gradient-to-r from-slate-100 via-emerald/10 to-slate-100 rounded-2xl p-8 md:p-12 text-center text-slate-900 mb-16 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 dark:text-slate-100">
           <h3 className="text-3xl font-bold mb-4">Faites la Différence</h3>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-black mb-8 max-w-2xl mx-auto dark:text-gray-400">
             Chaque transfert avec Diaspora Connect contribue directement à améliorer la vie 
             de millions de familles béninoises.
           </p>

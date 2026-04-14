@@ -49,20 +49,20 @@ const BlockchainSection = () => {
         </div>
 
         {/* Grille des avantages */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 mb-16">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon
             return (
               <div
                 key={index}
-                className="card-hover bg-gradient-to-br from-navy/5 to-emerald/5 dark:from-slate-900/40 dark:to-emerald-900/20 border border-emerald/20 dark:border-slate-700 rounded-xl p-8"
+                className="card-hover bg-gradient-to-br from-navy/5 to-emerald/5 dark:from-slate-900/40 dark:to-emerald-900/20 border border-emerald/20 dark:border-slate-700 rounded-xl p-4 sm:p-8"
               >
                 <div className="flex items-start gap-4">
                   <div className="bg-emerald/20 rounded-lg p-3 flex-shrink-0">
                     <Icon className="w-6 h-6 text-emerald" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-300 mb-2">{benefit.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-navy dark:text-slate-100 mb-2">{benefit.title}</h3>
                     <p className="text-slate-700 dark:text-slate-300 mb-4">{benefit.description}</p>
                     <div className="bg-emerald/10 rounded px-3 py-1 inline-block">
                       <p className="text-sm font-semibold text-emerald">{benefit.stats}</p>
@@ -75,10 +75,10 @@ const BlockchainSection = () => {
         </div>
 
         {/* Comparaison visuelle : Traditional vs Blockchain */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 mb-16">
           {/* Système Traditionnel */}
-          <div className="bg-red-50 dark:bg-red-900/30 rounded-xl p-8 border-2 border-red-200 dark:border-red-700">
-            <h3 className="text-xl font-bold text-gray-200 dark:text-slate-100 mb-6">Systèmes Traditionnels</h3>
+          <div className="bg-red-50 dark:bg-red-900/30 rounded-xl p-4 sm:p-8 border-2 border-red-200 dark:border-red-700">
+            <h3 className="text-lg sm:text-xl font-bold text-navy dark:text-slate-100 mb-6">Systèmes Traditionnels</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-red-300 flex items-center justify-center text-white font-bold">1</div>
