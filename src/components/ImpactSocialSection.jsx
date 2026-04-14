@@ -82,7 +82,7 @@ const ImpactSocialSection = () => {
 
         {/* Utilisation des fonds */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-navy mb-8">Où vont les transferts ?</h3>
+          <h3 className="text-2xl font-bold text-white mb-8">Où vont les transferts ?</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {impactAreas.map((area, index) => {
               const Icon = area.icon
@@ -144,7 +144,7 @@ const ImpactSocialSection = () => {
         </div>
 
         {/* Bénéfices directs */}
-        <div className="bg-slate-100 rounded-2xl p-8 md:p-12 text-slate-900 mb-16">
+        <div className="rounded-[2rem] border border-emerald/10 bg-white p-8 shadow-xl dark:bg-slate-900 dark:border-slate-700 mb-16">
           <h3 className="text-2xl font-bold mb-8">Bénéfices Directs de Diaspora Connect</h3>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -168,7 +168,7 @@ const ImpactSocialSection = () => {
 
         {/* Témoignages / Stories */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-navy mb-8">Histoires Réelles</h3>
+          <h3 className="text-2xl font-bold text-white mb-8">Histoires Réelles</h3>
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Story 1 */}
