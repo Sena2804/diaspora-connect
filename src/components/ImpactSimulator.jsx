@@ -23,6 +23,7 @@ const ImpactSimulator = () => {
   const diasporaFee = (usdAmount * 0.008).toFixed(2) // <1% = 0.8%
   const savings = (traditionalFee - diasporaFee).toFixed(2)
   const savingsInFCFA = (savings * EXCHANGE_RATE).toFixed(0)
+  const savingsPercent = usdAmount ? ((parseFloat(savings) / usdAmount) * 100).toFixed(1) : '0'
 
   const amountAfterTraditional = (usdAmount - parseFloat(traditionalFee)).toFixed(2)
   const amountAfterDiaspora = (usdAmount - parseFloat(diasporaFee)).toFixed(2)
@@ -41,10 +42,10 @@ const ImpactSimulator = () => {
         </div>
 
         {/* Conteneur principal du simulateur */}
-        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-2xl">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl p-8 md:p-12 shadow-2xl dark:shadow-none">
           {/* Input du montant */}
           <div className="mb-12">
-            <label className="block text-navy font-bold text-lg mb-4">
+            <label className="block text-navy dark:text-slate-100 font-bold text-lg mb-4">
               Montant à envoyer (USD)
             </label>
             
@@ -59,7 +60,7 @@ const ImpactSimulator = () => {
                 onChange={(e) => setUsdAmount(parseFloat(e.target.value))}
                 className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-emerald"
               />
-              <div className="flex justify-between text-sm text-gray-500 mt-2">
+              <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
                 <span>100 USD</span>
                 <span>5000 USD</span>
               </div>
@@ -73,9 +74,9 @@ const ImpactSimulator = () => {
                 max="5000"
                 value={usdAmount}
                 onChange={(e) => setUsdAmount(parseFloat(e.target.value))}
-                className="flex-1 px-4 py-3 border-2 border-emerald rounded-lg font-bold text-lg focus:outline-none focus:ring-2 focus:ring-emerald/50"
+                className="flex-1 px-4 py-3 border-2 border-emerald rounded-lg font-bold text-lg focus:outline-none focus:ring-2 focus:ring-emerald/50 bg-white dark:bg-slate-950 dark:text-slate-100"
               />
-              <span className="px-4 py-3 bg-gray-100 rounded-lg font-bold text-lg text-navy">
+              <span className="px-4 py-3 bg-gray-100 dark:bg-slate-800 rounded-lg font-bold text-lg text-navy dark:text-slate-100">
                 USD
               </span>
             </div>
@@ -84,66 +85,66 @@ const ImpactSimulator = () => {
           {/* Comparaison des frais */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Option 1 : Frais Traditionnels */}
-            <div className="card-hover bg-red-50 border-2 border-red-200 rounded-xl p-6">
-              <h3 className="text-navy font-bold text-lg mb-4">Services Traditionnels</h3>
+            <div className="card-hover bg-red-50 dark:bg-red-900/30 border-2 border-red-200 dark:border-red-700 rounded-xl p-6">
+              <h3 className="text-navy dark:text-slate-100 font-bold text-lg mb-4">Services Traditionnels</h3>
               
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
-                  <span className="text-gray-700">Montant initial</span>
-                  <span className="font-bold text-navy">${usdAmount.toFixed(2)}</span>
+                  <span className="text-gray-700 dark:text-gray-300">Montant initial</span>
+                  <span className="font-bold text-navy dark:text-slate-100">${usdAmount.toFixed(2)}</span>
                 </div>
-                <div className="border-t border-red-200"></div>
+                <div className="border-t border-red-200 dark:border-red-700"></div>
                 <div className="flex justify-between">
-                  <span className="text-gray-700">Frais (12%)</span>
+                  <span className="text-gray-700 dark:text-gray-300">Frais (12%)</span>
                   <span className="font-bold text-red-600">-${traditionalFee}</span>
                 </div>
-                <div className="bg-red-100 rounded p-3 mt-4">
-                  <p className="text-xs text-gray-600 mb-1">Arrivée à destination</p>
+                <div className="bg-red-100 dark:bg-red-900/40 rounded p-3 mt-4">
+                  <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">Arrivée à destination</p>
                   <p className="text-2xl font-bold text-red-600">
                     ${amountAfterTraditional}
                   </p>
                 </div>
               </div>
 
-              <p className="text-xs text-gray-600 text-center">
+              <p className="text-xs text-gray-600 dark:text-gray-300 text-center">
                 Western Union, MoneyGram, Banques traditionnelles
               </p>
             </div>
 
             {/* Option 2 : Diaspora Connect */}
-            <div className="card-hover bg-emerald-50 border-2 border-emerald rounded-xl p-6">
-              <h3 className="text-navy font-bold text-lg mb-4 flex items-center gap-2">
+            <div className="card-hover bg-emerald-50 dark:bg-emerald-900/30 border-2 border-emerald dark:border-emerald/70 rounded-xl p-6">
+              <h3 className="text-navy dark:text-slate-100 font-bold text-lg mb-4 flex items-center gap-2">
                 <Zap className="w-5 h-5 text-emerald" />
                 Diaspora Connect
               </h3>
               
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
-                  <span className="text-gray-700">Montant initial</span>
-                  <span className="font-bold text-navy">${usdAmount.toFixed(2)}</span>
+                  <span className="text-gray-700 dark:text-gray-300">Montant initial</span>
+                  <span className="font-bold text-navy dark:text-slate-100">${usdAmount.toFixed(2)}</span>
                 </div>
-                <div className="border-t border-emerald/20"></div>
+                <div className="border-t border-emerald/20 dark:border-emerald/50"></div>
                 <div className="flex justify-between">
-                  <span className="text-gray-700">Frais (&lt;1%)</span>
+                  <span className="text-gray-700 dark:text-gray-300">Frais (&lt;1%)</span>
                   <span className="font-bold text-emerald">-${diasporaFee}</span>
                 </div>
-                <div className="bg-emerald-100 rounded p-3 mt-4">
-                  <p className="text-xs text-gray-600 mb-1">Arrivée à destination</p>
+                <div className="bg-emerald-100 dark:bg-emerald-900/40 rounded p-3 mt-4">
+                  <p className="text-xs text-gray-600 dark:text-gray-300 mb-1">Arrivée à destination</p>
                   <p className="text-2xl font-bold text-emerald">
                     ${amountAfterDiaspora}
                   </p>
                 </div>
               </div>
 
-              <p className="text-xs text-gray-600 text-center">
+              <p className="text-xs text-gray-600 dark:text-gray-300 text-center">
                 Blockchain Stellar • Zéro intermédiaires
               </p>
             </div>
           </div>
 
           {/* Zone d'économies */}
-          <div className="bg-gradient-to-r from-emerald/10 to-emerald-light/20 rounded-xl p-8 border-2 border-emerald/30">
-            <h3 className="text-center text-navy font-bold text-lg mb-6">
+          <div className="bg-gradient-to-r from-emerald/10 to-emerald-light/20 dark:from-slate-900/40 dark:to-slate-900/20 rounded-xl p-8 border-2 border-emerald/30 dark:border-slate-700">
+            <h3 className="text-center text-navy dark:text-slate-100 font-bold text-lg mb-6">
               Vous Économisez
             </h3>
             
@@ -152,31 +153,43 @@ const ImpactSimulator = () => {
                 <p className="text-5xl font-bold gradient-text mb-2">
                   ${savings}
                 </p>
-                <p className="text-gray-600">par transfert</p>
+                <p className="text-gray-600 dark:text-gray-300">par transfert</p>
               </div>
               
               <div className="text-center">
                 <p className="text-5xl font-bold text-emerald mb-2">
                   {savingsInFCFA.replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} FCFA
                 </p>
-                <p className="text-gray-600">impacte directement les familles</p>
+                <p className="text-gray-600 dark:text-gray-300">impacte directement les familles</p>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                Économie estimée : {savingsPercent}% du montant envoyé
+              </p>
+              <div className="h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                <div
+                  className="h-2 rounded-full bg-emerald"
+                  style={{ width: `${Math.min(100, parseFloat(savingsPercent || '0'))}%` }}
+                />
               </div>
             </div>
 
             {/* Exemple d'impact annuel */}
-            <div className="mt-8 pt-8 border-t border-emerald/30 text-center">
-              <p className="text-gray-700 mb-2">
+            <div className="mt-8 pt-8 border-t border-emerald/30 dark:border-slate-700 text-center">
+              <p className="text-gray-700 dark:text-gray-300 mb-2">
                 Si vous transférez {usdAmount.toFixed(0)} USD chaque mois :
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <p className="text-sm text-gray-600">Économies annuelles</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Économies annuelles</p>
                   <p className="text-2xl font-bold text-emerald">
                     ${(savings * 12).toFixed(2)}
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600">Soit en FCFA</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Soit en FCFA</p>
                   <p className="text-2xl font-bold text-emerald">
                     {(savingsInFCFA * 12).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} FCFA
                   </p>

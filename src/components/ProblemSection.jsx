@@ -11,15 +11,15 @@ import { TrendingDown, AlertCircle } from 'lucide-react'
  */
 const ProblemSection = () => {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-white dark:bg-slate-950 dark:text-slate-100">
       <div className="max-w-6xl mx-auto">
         {/* En-tête */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-navy dark:text-slate-100 mb-4">
             Le Problème Actuel
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            La diaspora béninoise soutient son pays, mais les frais cachés érodent les bénéfices
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            La diaspora béninoise soutient son pays, mais des frais élevés réduisent souvent l'impact réel.
           </p>
         </div>
 
@@ -32,24 +32,24 @@ const ProblemSection = () => {
                 <TrendingDown className="w-8 h-8 text-emerald" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-navy mb-2">450-550 Millions USD</h3>
-                <p className="text-gray-700">
-                  Montant envoyé chaque année par la diaspora béninoise à ses familles
+                <h3 className="text-2xl font-bold text-navy dark:text-slate-100 mb-2">450-550 Millions USD</h3>
+                <p className="text-gray-700 dark:text-gray-300">
+                  Estimation des montants envoyés par la diaspora béninoise à ses familles chaque année.
                 </p>
-                <p className="text-emerald font-semibold mt-2">Soit ~40% du PIB du Bénin</p>
+                <p className="text-emerald font-semibold mt-2">Soit une contribution significative à l'économie nationale</p>
               </div>
             </div>
           </div>
 
           {/* Statistique 2 : Frais */}
-          <div className="card-hover bg-gradient-to-br from-red-50 to-orange-50 border border-red-200 rounded-2xl p-8">
+          <div className="card-hover bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/30 dark:to-orange-900/20 border border-red-200 dark:border-red-700 rounded-2xl p-8">
             <div className="flex items-start gap-4">
-              <div className="bg-red-100 rounded-lg p-3">
+              <div className="bg-red-100 dark:bg-red-900/40 rounded-lg p-3">
                 <AlertCircle className="w-8 h-8 text-red-600" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-navy mb-2">7-15% de Frais</h3>
-                <p className="text-gray-700">
+                <h3 className="text-2xl font-bold text-navy dark:text-slate-100 mb-2">7-15% de Frais</h3>
+                <p className="text-gray-700 dark:text-gray-300">
                   Prélevés par les acteurs traditionnels (Western Union, banques, etc.)
                 </p>
                 <p className="text-red-600 font-semibold mt-2">
@@ -61,7 +61,7 @@ const ProblemSection = () => {
         </div>
 
         {/* Comparaison détaillée */}
-        <div className="bg-navy-dark rounded-2xl p-8 md:p-12 text-white mb-16">
+        <div className="bg-slate-100 rounded-2xl p-8 md:p-12 text-slate-900 dark:bg-slate-900 dark:text-slate-100 dark:border-slate-700 mb-16">
           <h3 className="text-2xl font-bold mb-8">Comparaison des Frais</h3>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -89,13 +89,13 @@ const ProblemSection = () => {
         </div>
 
         {/* Objectif ODD */}
-        <div className="bg-emerald/10 border-2 border-emerald rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-navy mb-4">Notre Objectif : ODD 10.c</h3>
-          <p className="text-lg text-gray-700 mb-4">
-            Réduire les coûts de transfert de fonds à <span className="font-bold text-emerald">3%</span> d'ici 2030
+        <div className="bg-emerald/10 border-2 border-emerald rounded-2xl p-8 text-center dark:bg-slate-900 dark:border-slate-700">
+          <h3 className="text-2xl font-bold text-navy dark:text-slate-100 mb-4">Notre Objectif : ODD 10.c</h3>
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            Réduire les coûts de transfert de fonds à <span className="font-bold text-emerald">3%</span> ou moins, conformément aux objectifs de l'ONU.
           </p>
-          <p className="text-gray-600 text-sm max-w-2xl mx-auto">
-            Aligned with the Sustainable Development Goal 10.c - Facilitate orderly, safe, regular and responsible migration and mobility of people, including through implementation of planned and well-managed migration policies.
+          <p className="text-gray-600 dark:text-gray-400 text-sm max-w-2xl mx-auto">
+            L'objectif 10.c vise à diminuer les coûts du transfert de fonds et à rendre les envois de la diaspora plus accessibles.
           </p>
         </div>
       </div>

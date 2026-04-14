@@ -36,15 +36,15 @@ const BlockchainSection = () => {
   ]
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-white dark:bg-slate-950 dark:text-slate-100">
       <div className="max-w-6xl mx-auto">
         {/* En-tête */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-navy dark:text-slate-100 mb-4">
             La Technologie Blockchain
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Pourquoi nous utilisons Stellar ou Celo pour révolutionner les transferts
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Pourquoi nous choisissons Stellar ou Celo pour rendre les transferts plus rapides et moins coûteux.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ const BlockchainSection = () => {
             return (
               <div
                 key={index}
-                className="card-hover bg-gradient-to-br from-navy/5 to-emerald/5 border border-emerald/20 rounded-xl p-8"
+                className="card-hover bg-gradient-to-br from-navy/5 to-emerald/5 dark:from-slate-900/40 dark:to-emerald-900/20 border border-emerald/20 dark:border-slate-700 rounded-xl p-8"
               >
                 <div className="flex items-start gap-4">
                   <div className="bg-emerald/20 rounded-lg p-3 flex-shrink-0">
@@ -77,8 +77,8 @@ const BlockchainSection = () => {
         {/* Comparaison visuelle : Traditional vs Blockchain */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Système Traditionnel */}
-          <div className="bg-red-50 rounded-xl p-8 border-2 border-red-200">
-            <h3 className="text-xl font-bold text-navy mb-6">Systèmes Traditionnels</h3>
+          <div className="bg-red-50 dark:bg-red-900/30 rounded-xl p-8 border-2 border-red-200 dark:border-red-700">
+            <h3 className="text-xl font-bold text-navy dark:text-slate-100 mb-6">Systèmes Traditionnels</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-red-300 flex items-center justify-center text-white font-bold">1</div>
@@ -117,8 +117,8 @@ const BlockchainSection = () => {
           </div>
 
           {/* Système Blockchain */}
-          <div className="bg-emerald-50 rounded-xl p-8 border-2 border-emerald">
-            <h3 className="text-xl font-bold text-navy mb-6">Diaspora Connect (Blockchain)</h3>
+          <div className="bg-emerald-50 dark:bg-emerald-900/30 rounded-xl p-8 border-2 border-emerald dark:border-emerald/70">
+            <h3 className="text-xl font-bold text-navy dark:text-slate-100 mb-6">Diaspora Connect (Blockchain)</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-emerald flex items-center justify-center text-white font-bold">1</div>
@@ -158,7 +158,7 @@ const BlockchainSection = () => {
         </div>
 
         {/* Technologies utilisées */}
-        <div className="bg-gradient-to-r from-navy-dark to-navy-dark rounded-xl p-8 text-white">
+        <div className="bg-gradient-to-r from-slate-100 via-slate-200 to-white rounded-xl p-8 text-slate-950 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 dark:text-slate-100">
           <h3 className="text-2xl font-bold mb-8 text-center">Réseaux Blockchain Supportés</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="border-l-4 border-emerald pl-6">
