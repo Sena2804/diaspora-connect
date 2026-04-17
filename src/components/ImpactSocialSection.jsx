@@ -71,14 +71,32 @@ const ImpactSocialSection = () => {
   const renderPieChart = () => {
     const total = impactAreas.reduce((sum, area) => sum + area.value, 0)
     let cumulativeAngle = 0
-    const radius = 120
-    const centerX = 150
-    const centerY = 150
+    const radius = 160
+    const centerX = 200
+    const centerY = 200
 
     return (
-      <svg width="300" height="300" viewBox="0 0 300 300" className="mx-auto">
-        {/* Groupe rotatif pour les slices */}
-        <g className="animate-spin-slow origin-center" style={{ transformOrigin: `${centerX}px ${centerY}px` }}>
+      <svg width="450" height="450" viewBox="0 0 450 450" className="mx-auto drop-shadow-2xl">
+        {/* Fond subtil avec gradient */}
+        <defs>
+          <radialGradient id="chartBg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="rgba(255,255,255,0.1)" />
+            <stop offset="100%" stopColor="rgba(255,255,255,0.05)" />
+          </radialGradient>
+          <filter id="softGlow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        {/* Cercle de fond subtil */}
+        <circle cx={centerX} cy={centerY} r="180" fill="url(#chartBg)" className="opacity-50" />
+
+        {/* Groupe rotatif pour les slices avec animation douce */}
+        <g className="animate-spin-slow origin-center transition-all duration-1000 ease-in-out" style={{ transformOrigin: `${centerX}px ${centerY}px` }}>
           {impactAreas.map((area, index) => {
             const angle = (area.value / total) * 360
             const startAngle = cumulativeAngle
@@ -104,20 +122,30 @@ const ImpactSocialSection = () => {
                 key={index}
                 d={pathData}
                 fill={area.color}
-                stroke="#fff"
-                strokeWidth="2"
-                className="hover:opacity-80 transition-opacity cursor-pointer"
+                stroke="#ffffff"
+                strokeWidth="3"
+                className="hover:opacity-90 hover:scale-105 transition-all duration-300 cursor-pointer filter drop-shadow-sm dark:stroke-black"
+                filter="url(#softGlow)"
               />
             )
           })}
         </g>
-        
-        {/* Cercle central fixe */}
-        <circle cx={centerX} cy={centerY} r="60" fill="white" stroke="#e5e7eb" strokeWidth="2"/>
-        <text x={centerX} y={centerY - 10} textAnchor="middle" className="text-lg font-bold text-slate-900 dark:text-slate-100" style={{ pointerEvents: 'none' }}>
+
+        {/* Cercle central avec effet soft */}
+        <circle
+          cx={centerX}
+          cy={centerY}
+          r="90"
+          fill="white"
+          stroke="#e5e7eb"
+          strokeWidth="2"
+          className="dark:fill-slate-200 dark:stroke-slate-900 drop-shadow-lg"
+          filter="url(#softGlow)"
+        />
+        <text x={centerX} y={centerY - 15} textAnchor="middle" className="text-xl font-bold text-slate-900 dark:text-slate-100" style={{ pointerEvents: 'none' }}>
           Répartition
         </text>
-        <text x={centerX} y={centerY + 10} textAnchor="middle" className="text-sm text-slate-600 dark:text-slate-400" style={{ pointerEvents: 'none' }}>
+        <text x={centerX} y={centerY + 15} textAnchor="middle" className="text-sm text-slate-600 dark:text-slate-400" style={{ pointerEvents: 'none' }}>
           des fonds
         </text>
       </svg>
