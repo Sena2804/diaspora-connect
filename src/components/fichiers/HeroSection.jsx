@@ -19,19 +19,19 @@ const HeroSection = () => {
 
       <div className="relative mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[1.5fr_1fr] items-center">
         <div className="space-y-8 lg:text-left text-center">
-          <div data-aos="fade-down" className="inline-flex items-center gap-3 rounded-full border border-cyan-200 bg-white/80 px-4 py-2 text-sm text-cyan-700 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/70 dark:text-cyan-200">
+          <div className="inline-flex items-center gap-3 rounded-full border border-cyan-200 bg-white/80 px-4 py-2 text-sm text-cyan-700 backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/70 dark:text-cyan-200">
             Nouvelle plateforme pour les transferts de la diaspora
           </div>
-          <h1 data-aos="fade-up" data-aos-delay="100" className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
             Diaspora Connect : plus de flux, moins de frais,
             <span className="block text-emerald">plus d’impact réel</span>
           </h1>
 
-          <p data-aos="fade-up" data-aos-delay="200" className="max-w-xl text-lg text-slate-600 dark:text-slate-300">
+          <p className="max-w-xl text-lg text-slate-600 dark:text-slate-300">
             Construisez un pont financier transparent entre la diaspora et les familles au Bénin, avec un modèle de transfert plus rapide, plus sûr et plus accessible.
           </p>
 
-          <div data-aos="fade-up" data-aos-delay="300" className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a
               href="#simulator"
               className="btn-hover inline-flex items-center justify-center gap-2 rounded-full bg-emerald px-8 py-4 text-base font-bold text-slate-950 shadow-xl shadow-emerald/20 transition-colors hover:bg-emerald-dark"
@@ -48,17 +48,17 @@ const HeroSection = () => {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3 mt-10">
-            <div data-aos="fade-up" data-aos-delay="400" className="rounded-3xl border border-slate-200 bg-white p-5 text-left shadow-lg shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
+            <div className="rounded-3xl border border-slate-200 bg-white p-5 text-left shadow-lg shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
               <p className="text-sm uppercase tracking-[0.2em] text-emerald">Economies</p>
               <p className="mt-4 text-3xl font-bold">6x</p>
               <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Plus de fonds envoyés aux familles</p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="500" className="rounded-3xl border border-slate-200 bg-white p-5 text-left shadow-lg shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
+            <div className="rounded-3xl border border-slate-200 bg-white p-5 text-left shadow-lg shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
               <p className="text-sm uppercase tracking-[0.2em] text-cyan-600 dark:text-cyan-300">Rapidité</p>
               <p className="mt-4 text-3xl font-bold"><span className="text-emerald">Instantané</span></p>
               <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Paiements plus rapides et transparents</p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="600" className="rounded-3xl border border-slate-200 bg-white p-5 text-left shadow-lg shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
+            <div className="rounded-3xl border border-slate-200 bg-white p-5 text-left shadow-lg shadow-slate-200/50 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
               <p className="text-sm uppercase tracking-[0.2em] text-violet-500 dark:text-violet-300">Confiance</p>
               <p className="mt-4 text-3xl font-bold">0</p>
               <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">Intermédiaires cachés</p>
@@ -66,7 +66,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div data-aos="fade-left" data-aos-delay="300" className="relative rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl shadow-slate-200/30 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
+        <div className="relative rounded-[2rem] border border-slate-200 bg-white p-8 shadow-2xl shadow-slate-200/30 dark:border-slate-800 dark:bg-slate-900 dark:shadow-none">
           <div className="mb-6 flex items-center justify-between rounded-3xl bg-slate-100 px-5 py-4 text-slate-900 dark:bg-slate-800 dark:text-slate-100">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-emerald">Diaspora Connect</p>

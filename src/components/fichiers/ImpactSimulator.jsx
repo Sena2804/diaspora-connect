@@ -95,7 +95,7 @@ const ImpactSimulator = () => {
           <div className="flex flex-col lg:flex-row gap-8 mb-12">
             {/* Solutions concurrentes à gauche */}
             <div className="flex-1">
-              <h3 data-aos="fade-right" className="text-navy dark:text-slate-100 font-bold text-lg mb-6 text-center lg:text-left">
+              <h3 className="text-navy dark:text-slate-100 font-bold text-lg mb-6 text-center lg:text-left">
                 Solutions Traditionnelles
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -105,7 +105,7 @@ const ImpactSimulator = () => {
                   const textColor = 'text-red-600'
 
                   return (
-                    <div key={index} data-aos="fade-up" data-aos-delay={index * 100} className={`card-hover ${bgColor} border-2 rounded-xl p-6`}>
+                    <div key={index} className={`card-hover ${bgColor} border-2 rounded-xl p-6`}>
                       <h3 className="text-navy dark:text-slate-100 font-bold text-base mb-3">
                         {solution.name}
                       </h3>
@@ -139,7 +139,7 @@ const ImpactSimulator = () => {
             </div>
 
             {/* Diaspora Connect à droite */}
-            <div data-aos="fade-left" data-aos-delay="400" className="lg:w-1/3">
+            <div className="lg:w-1/3">
               <h3 className="text-navy dark:text-slate-100 font-bold text-lg mb-6 text-center">
                 Notre Solution
               </h3>

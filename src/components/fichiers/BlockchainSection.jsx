@@ -39,7 +39,7 @@ const BlockchainSection = () => {
     <section className="py-20 px-4 bg-white dark:bg-slate-950 dark:text-slate-100">
       <div className="max-w-6xl mx-auto">
         {/* En-tête */}
-        <div data-aos="fade-up" className="text-center mb-16">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-navy dark:text-slate-100 mb-4">
             La Technologie Blockchain
           </h2>
@@ -55,8 +55,6 @@ const BlockchainSection = () => {
             return (
               <div
                 key={index}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
                 className="card-hover bg-gradient-to-br from-navy/5 to-emerald/5 dark:from-slate-900/40 dark:to-emerald-900/20 border border-emerald/20 dark:border-slate-700 rounded-xl p-4 sm:p-8"
               >
                 <div className="flex items-start gap-4">
@@ -79,7 +77,7 @@ const BlockchainSection = () => {
         {/* Comparaison visuelle : Traditional vs Blockchain */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 mb-16">
           {/* Système Traditionnel */}
-          <div data-aos="fade-right" className="bg-red-50 dark:bg-red-900/30 rounded-xl p-4 sm:p-8 border-2 border-red-200 dark:border-red-700">
+          <div className="bg-red-50 dark:bg-red-900/30 rounded-xl p-4 sm:p-8 border-2 border-red-200 dark:border-red-700">
             <h3 className="text-lg sm:text-xl font-bold text-navy dark:text-slate-100 mb-6">Systèmes Traditionnels</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
@@ -119,7 +117,7 @@ const BlockchainSection = () => {
           </div>
 
           {/* Système Blockchain */}
-          <div data-aos="fade-left" className="bg-emerald-50 dark:bg-emerald-900/30 rounded-xl p-8 border-2 border-emerald dark:border-emerald/70">
+          <div className="bg-emerald-50 dark:bg-emerald-900/30 rounded-xl p-8 border-2 border-emerald dark:border-emerald/70">
             <h3 className="text-xl font-bold text-black dark:text-white dark:text-slate-100 mb-6">Diaspora Connect (Blockchain)</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
@@ -160,7 +158,7 @@ const BlockchainSection = () => {
         </div>
 
         {/* Technologies utilisées */}
-        <div data-aos="fade-up" className="bg-gradient-to-r from-slate-100 via-slate-200 to-white rounded-xl p-8 text-slate-950 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 dark:text-slate-100">
+        <div className="bg-gradient-to-r from-slate-100 via-slate-200 to-white rounded-xl p-8 text-slate-950 dark:from-slate-900 dark:via-slate-950 dark:to-slate-950 dark:text-slate-100">
           <h3 className="text-2xl font-bold mb-8 text-center">Réseaux Blockchain Supportés</h3>
           <div className="flex items-center justify-center gap-40 ">
             <div className="border-l-4 border-emerald pl-6">

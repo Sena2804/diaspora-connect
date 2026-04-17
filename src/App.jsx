@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import './App.css'
 import HeroSection from './components/HeroSection'
 import ProblemSection from './components/ProblemSection'
@@ -23,6 +25,21 @@ import Footer from './components/Footer'
  */
 function App() {
     const { theme, setTheme } = useTheme()
+
+    useEffect(() => {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: false,
+        mirror: true,
+        offset: 50,
+      });
+
+      window.addEventListener('load', () => {
+        AOS.refresh();
+      });
+
+    }, [])
 
   return (
     <div className="min-h-screen bg-white text-slate-950 dark:bg-black dark:text-slate-100">
@@ -65,29 +82,31 @@ function App() {
       </header>
 
       {/* Contenu principal - avec padding-top pour le header sticky */}
-      <main className="pt-16">
+      <main className="pt-16 overflow-hidden">
         {/* Section Hero */}
-        <HeroSection />
+        <div id="hero">
+          <HeroSection />
+        </div>
 
         {/* Section Problème */}
-        <section id="problem">
+        <div id="problem" >
           <ProblemSection />
-        </section>
+        </div>
 
         {/* Section Simulateur Interactif */}
-        <section id="simulator">
+        <div id="simulator" >
           <ImpactSimulator />
-        </section>
+        </div>
 
         {/* Section Blockchain */}
-        <section id="blockchain">
+        <div id="blockchain" >
           <BlockchainSection />
-        </section>
+        </div>
 
         {/* Section Impact Social */}
-        <section id="impact">
+        <div id="impact" >
           <ImpactSocialSection />
-        </section>
+        </div>
       </main>
 
       {/* Pied de page */}

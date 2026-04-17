@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Heart, Stethoscope, BookOpen, Home, Briefcase } from 'lucide-react';
-import AOS from 'aos';
+import React, { useState, useEffect } from 'react'
+import { Heart, Stethoscope, BookOpen, Home, Briefcase } from 'lucide-react'
 
 /**
  * ImpactSocialSection Component
@@ -12,10 +11,9 @@ const ImpactSocialSection = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    // Simulate loading time for demo
     const timer = setTimeout(() => {
-      setIsLoading(false);
-      // TRÈS IMPORTANT : Recalculer les positions des animations après le chargement
-      setTimeout(() => AOS.refresh(), 100); 
+      setIsLoading(false)
     }, 2000)
 
     return () => clearTimeout(timer)
@@ -168,7 +166,7 @@ const ImpactSocialSection = () => {
         </div>
 
         {/* Statistique principale */}
-        <div data-aos="zoom-in" className="bg-gradient-to-r from-emerald/10 to-emerald-light/20 dark:from-slate-900/40 dark:to-slate-900/20 border-2 border-emerald rounded-2xl p-6 sm:p-8 md:p-12 mb-16 ">
+        <div className="bg-gradient-to-r from-emerald/10 to-emerald-light/20 dark:from-slate-900/40 dark:to-slate-900/20 border-2 border-emerald rounded-2xl p-6 sm:p-8 md:p-12 mb-16 animate-fade-in-up">
           <div className="text-center">
             <p className="text-5xl sm:text-6xl md:text-7xl font-bold gradient-text mb-4">30-40%</p>
             <p className="text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300">
@@ -181,7 +179,7 @@ const ImpactSocialSection = () => {
         </div>
 
         {/* Utilisation des fonds */}
-        <div className="mb-16" data-aos="fade-up">
+        <div className="mb-16 animate-fade-in-up delay-100">
           <h3 className="text-xl sm:text-2xl font-bold text-navy dark:text-slate-100 mb-8 text-center">Où vont les transferts ?</h3>
           
           {isLoading ? (
@@ -233,8 +231,8 @@ const ImpactSocialSection = () => {
           )}
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 mb-16">
-          <div data-aos="fade-right" className="rounded-[2rem] border border-emerald/10 bg-white p-8 shadow-xl dark:bg-slate-900 dark:border-slate-700">
+        <div className="grid lg:grid-cols-2 gap-6 mb-16 animate-fade-in-up delay-200">
+          <div className="rounded-[2rem] border border-emerald/10 bg-white p-8 shadow-xl dark:bg-slate-900 dark:border-slate-700">
             <h3 className="text-xl font-bold text-navy dark:text-slate-100 mb-4">Impact des économies</h3>
             <p className="text-sm text-slate-600 dark:text-slate-300 mb-8">
               Chaque pourcentage économisé sur les frais de transfert est directement réinvesti dans ces secteurs essentiels.
@@ -255,7 +253,7 @@ const ImpactSocialSection = () => {
             </div>
           </div>
 
-          <div data-aos="fade-left" className="rounded-[2rem] border border-emerald/10 bg-gradient-to-br from-emerald/10 via-white/40 to-slate-100 p-8 shadow-2xl dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 dark:border-slate-700">
+          <div className="rounded-[2rem] border border-emerald/10 bg-gradient-to-br from-emerald/10 via-white/40 to-slate-100 p-8 shadow-2xl dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 dark:border-slate-700">
             <h3 className="text-xl font-bold text-navy dark:text-white mb-4">Pourquoi c'est plus efficace</h3>
             <div className="space-y-6">
               <div className="rounded-3xl bg-white/90 p-6 shadow-lg dark:bg-slate-950 dark:shadow-black/20">
@@ -273,21 +271,21 @@ const ImpactSocialSection = () => {
         </div>
 
         {/* Bénéfices directs */}
-        <div data-aos="fade-up" className="rounded-[2rem] border border-emerald/10 bg-white p-4 sm:p-8 shadow-xl dark:bg-slate-900 dark:border-slate-700 mb-16">
+        <div className="rounded-[2rem] border border-emerald/10 bg-white p-4 sm:p-8 shadow-xl dark:bg-slate-900 dark:border-slate-700 mb-16">
           <h3 className="text-xl sm:text-2xl font-bold text-navy dark:text-slate-100 mb-6 sm:mb-8">Bénéfices Directs de Diaspora Connect</h3>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
-            <div data-aos="fade-up" data-aos-delay="100" className="border-t-4 border-emerald pt-4 sm:pt-6">
+            <div className="border-t-4 border-emerald pt-4 sm:pt-6">
               <p className="text-3xl sm:text-4xl font-bold text-emerald mb-2">+350K</p>
               <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">Enfants scolarisés supplémentaires par an</p>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">Grâce aux frais réduits</p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="200" className="border-t-4 border-emerald pt-4 sm:pt-6">
+            <div className="border-t-4 border-emerald pt-4 sm:pt-6">
               <p className="text-3xl sm:text-4xl font-bold text-emerald mb-2">+150K</p>
               <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">Familles sortant de la pauvreté</p>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">Investissements plus élevés</p>
             </div>
-            <div data-aos="fade-up" data-aos-delay="300" className="border-t-4 border-emerald pt-4 sm:pt-6">
+            <div className="border-t-4 border-emerald pt-4 sm:pt-6">
               <p className="text-3xl sm:text-4xl font-bold text-emerald mb-2">+12M FCFA</p>
               <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300">Investis en entrepreneuriat local</p>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">Création d'emplois</p>
@@ -296,12 +294,12 @@ const ImpactSocialSection = () => {
         </div>
 
         {/* Témoignages / Stories */}
-        <div data-aos="fade-up" className="mb-16">
-          <h3 data-aos="fade-right" className="text-xl sm:text-2xl font-bold text-navy dark:text-slate-100 mb-6 sm:mb-8">Histoires Réelles</h3>
+        <div className="mb-16 animate-fade-in-up delay-300">
+          <h3 className="text-xl sm:text-2xl font-bold text-navy dark:text-slate-100 mb-6 sm:mb-8">Histoires Réelles</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
             {/* Story 1 */}
-            <div data-aos="fade-right" className="bg-white dark:bg-slate-900 border-l-4 border-emerald rounded-xl p-6 shadow-md dark:shadow-none">
+            <div className="bg-white dark:bg-slate-900 border-l-4 border-emerald rounded-xl p-6 shadow-md dark:shadow-none">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald to-emerald-dark flex items-center justify-center text-white font-bold text-lg">
                   AD
@@ -324,7 +322,7 @@ const ImpactSocialSection = () => {
             </div>
 
             {/* Story 2 */}
-            <div data-aos="fade-left" className="bg-white dark:bg-slate-900 border-l-4 border-emerald rounded-xl p-6 shadow-md dark:shadow-none">
+            <div className="bg-white dark:bg-slate-900 border-l-4 border-emerald rounded-xl p-6 shadow-md dark:shadow-none">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg">
                   KW
@@ -349,7 +347,7 @@ const ImpactSocialSection = () => {
         </div>
 
         {/* Appel à l'action */}
-        <div data-aos="zoom-in" data-aos-duration="1000" className="bg-gradient-to-r from-slate-100 via-emerald/10 to-slate-100 rounded-2xl p-8 md:p-12 text-center text-slate-900 mb-16 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 dark:text-slate-100">
+        <div className="bg-gradient-to-r from-slate-100 via-emerald/10 to-slate-100 rounded-2xl p-8 md:p-12 text-center text-slate-900 mb-16 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 dark:text-slate-100">
           <h3 className="text-3xl font-bold mb-4">Faites la Différence</h3>
           <p className="text-lg text-black mb-8 max-w-2xl mx-auto dark:text-gray-400">
             Chaque transfert avec Diaspora Connect contribue directement à améliorer la vie 
@@ -365,19 +363,19 @@ const ImpactSocialSection = () => {
 
         {/* Chiffres clés */}
         <div className="mt-16 grid md:grid-cols-4 gap-6 text-center">
-          <div data-aos="zoom-in-up" data-aos-delay="100">
+          <div>
             <p className="text-emerald text-4xl font-bold mb-2">2.1M</p>
             <p className="text-gray-700 font-semibold">Bénéficiaires potentiels</p>
           </div>
-          <div data-aos="zoom-in-up" data-aos-delay="200">
+          <div>
             <p className="text-emerald text-4xl font-bold mb-2">25-30B FCFA</p>
             <p className="text-gray-700 font-semibold">À économiser annuellement</p>
           </div>
-          <div data-aos="zoom-in-up" data-aos-delay="300">
+          <div>
             <p className="text-emerald text-4xl font-bold mb-2">400K</p>
             <p className="text-gray-700 font-semibold">Emplois créables</p>
           </div>
-          <div data-aos="zoom-in-up" data-aos-delay="400">
+          <div>
             <p className="text-emerald text-4xl font-bold mb-2">ODD</p>
             <p className="text-gray-700 font-semibold">Nations Unies</p>
           </div>
