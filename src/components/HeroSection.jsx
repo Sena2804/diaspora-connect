@@ -88,10 +88,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="mt-8 rounded-3xl bg-gradient-to-r from-emerald/20 to-emerald/5 p-6 text-slate-950 dark:from-emerald-900/20 dark:to-slate-900 dark:text-slate-100">
+          <div className="bg-gradient-to-r from-emerald/20 to-emerald/5 p-6 text-slate-950 dark:from-emerald-900/20 dark:to-slate-900 dark:text-slate-100">
             <p className="text-sm uppercase tracking-[0.2em] text-emerald-dark">Impact prévu</p>
-            <p className="mt-4 text-3xl font-bold">+35 milliards de FCFA</p>
-            <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">Économisés chaque année pour les familles béninoises.</p>
+            <p className="mt-4 text-3xl font-bold">+25-30 milliards de FCFA</p>
+            <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">Économisés chaque année pour les familles béninoises (calcul basé sur les transferts annuels).</p>
           </div>
         </div>
       </div>

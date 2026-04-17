@@ -15,10 +15,10 @@ const ImpactSimulator = () => {
   // Taux de change USD -> FCFA (taux approximatif)
   const EXCHANGE_RATE = 610
 
-  // Solutions de transfert avec leurs frais (basés sur des données réelles approximatives)
+  // Solutions de transfert avec leurs frais (basés sur des données du marché 2024)
   const transferSolutions = [
-    { name: 'Western Union', feePercent: 8, description: 'Service traditionnel' },
-    { name: 'MoneyGram', feePercent: 7, description: 'Service traditionnel' },
+    { name: 'Western Union', feePercent: 12, description: 'Service traditionnel' },
+    { name: 'MoneyGram', feePercent: 8, description: 'Service traditionnel' },
     { name: 'Wise', feePercent: 1.5, description: 'Transfert moderne' },
     { name: 'Remitly', feePercent: 2, description: 'Transfert en ligne' },
     { name: 'WorldRemit', feePercent: 1, description: 'Transfert international' },

@@ -32,11 +32,11 @@ const ProblemSection = () => {
                 <TrendingDown className="w-8 h-8 text-emerald" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-navy dark:text-slate-100 mb-2">450-550 Millions USD</h3>
+                <h3 className="text-2xl font-bold text-navy dark:text-slate-100 mb-2">400-500 Millions USD</h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Estimation des montants envoyés par la diaspora béninoise à ses familles chaque année.
+                  Estimation des montants envoyés par la diaspora béninoise à ses familles chaque année (Banque Mondiale, 2023).
                 </p>
-                <p className="text-emerald font-semibold mt-2">Soit une contribution significative à l'économie nationale</p>
+                <p className="text-emerald font-semibold mt-2">Soit environ 1.8-2.3% du PIB national</p>
               </div>
             </div>
           </div>
@@ -48,12 +48,12 @@ const ProblemSection = () => {
                 <AlertCircle className="w-8 h-8 text-red-600" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-navy dark:text-slate-100 mb-2">7-15% de Frais</h3>
+                <h3 className="text-2xl font-bold text-navy dark:text-slate-100 mb-2">8-12% de Frais</h3>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Prélevés par les acteurs traditionnels (Western Union, banques, etc.)
+                  Prélevés par les acteurs traditionnels (Western Union, banques, etc.) selon les données du secteur.
                 </p>
                 <p className="text-red-600 font-semibold mt-2">
-                  Soit 31.5-82.5 Millions USD perdus par an
+                  Soit 32-60 Millions USD perdus par an
                 </p>
               </div>
             </div>
@@ -68,14 +68,14 @@ const ProblemSection = () => {
             {/* Western Union */}
             <div className="border-l-4 border-red-500 pl-6">
               <p className="text-gray-400 text-sm mb-2">Western Union</p>
-              <p className="text-3xl font-bold mb-2">12-15%</p>
+              <p className="text-3xl font-bold mb-2">10-15%</p>
               <p className="text-gray-300 text-sm">Frais + taux de change</p>
             </div>
 
             {/* Banques traditionnelles */}
             <div className="border-l-4 border-orange-500 pl-6">
               <p className="text-gray-400 text-sm mb-2">Banques Traditionnelles</p>
-              <p className="text-3xl font-bold mb-2">7-10%</p>
+              <p className="text-3xl font-bold mb-2">8-12%</p>
               <p className="text-gray-300 text-sm">Frais + frais bancaires</p>
             </div>
 

@@ -49,6 +49,78 @@ html {
   @apply h-full rounded-full bg-emerald transition-all duration-700 ease-out;
 }
 
+/* Slow spinning animation for pie chart */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-fade-in-up.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-fade-in-up.delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* Shimmer effect for loading bars */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.5s infinite;
+}
+
+/* Spinning animation - only rotates the group, not the whole SVG */
+@keyframes spinSmooth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+g.animate-spin-slow {
+  transform-origin: center;
+  will-change: transform;
+  animation: spinSmooth 20s linear infinite;
+}
+
 .feature-pill {
   @apply inline-flex items-center rounded-full border border-emerald/20 bg-emerald/10 px-4 py-2 text-sm font-semibold text-emerald;
 }

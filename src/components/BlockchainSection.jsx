@@ -83,28 +83,28 @@ const BlockchainSection = () => {
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-red-300 flex items-center justify-center text-white font-bold">1</div>
                 <div>
-                  <p className="font-semibold text-gray-200">Vous initiez le transfert</p>
+                  <p className="font-semibold text-black dark:text-white">Vous initiez le transfert</p>
                   <p className="text-sm text-slate-700 dark:text-slate-300">Frais de démarrage</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-red-300 flex items-center justify-center text-white font-bold">2</div>
                 <div>
-                  <p className="font-semibold text-gray-200">Passage par des intermédiaires</p>
+                  <p className="font-semibold text-black dark:text-white">Passage par des intermédiaires</p>
                   <p className="text-sm text-slate-700 dark:text-slate-300">Chaque intermédiaire prend sa part</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-red-300 flex items-center justify-center text-white font-bold">3</div>
                 <div>
-                  <p className="font-semibold text-gray-200">Conversion de devises</p>
+                  <p className="font-semibold text-black dark:text-white">Conversion de devises</p>
                   <p className="text-sm text-slate-700 dark:text-slate-300">Mauvais taux de change</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-red-300 flex items-center justify-center text-white font-bold">4</div>
                 <div>
-                  <p className="font-semibold text-gray-200">Délai d'attente</p>
+                  <p className="font-semibold text-black dark:text-white">Délai d'attente</p>
                   <p className="text-sm text-slate-700 dark:text-slate-300">Plusieurs jours</p>
                 </div>
               </div>
@@ -118,33 +118,33 @@ const BlockchainSection = () => {
 
           {/* Système Blockchain */}
           <div className="bg-emerald-50 dark:bg-emerald-900/30 rounded-xl p-8 border-2 border-emerald dark:border-emerald/70">
-            <h3 className="text-xl font-bold text-gray-200 dark:text-slate-100 mb-6">Diaspora Connect (Blockchain)</h3>
+            <h3 className="text-xl font-bold text-black dark:text-white dark:text-slate-100 mb-6">Diaspora Connect (Blockchain)</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-emerald flex items-center justify-center text-white font-bold">1</div>
                 <div>
-                  <p className="font-semibold text-gray-200">Vous initiez le transfert</p>
+                  <p className="font-semibold text-black dark:text-white">Vous initiez le transfert</p>
                   <p className="text-sm text-slate-700 dark:text-slate-300">Interface simple</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-emerald flex items-center justify-center text-white font-bold">2</div>
                 <div>
-                  <p className="font-semibold text-gray-200">La blockchain traite</p>
+                  <p className="font-semibold text-black dark:text-white">La blockchain traite</p>
                   <p className="text-sm text-slate-700 dark:text-slate-300">Aucun intermédiaire</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-emerald flex items-center justify-center text-white font-bold">3</div>
                 <div>
-                  <p className="font-semibold text-gray-200">Conversion optimale</p>
+                  <p className="font-semibold text-black dark:text-white">Conversion optimale</p>
                   <p className="text-sm text-slate-700 dark:text-slate-300">Meilleur taux du marché</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-emerald flex items-center justify-center text-white font-bold">4</div>
                 <div>
-                  <p className="font-semibold text-gray-200">Arrivée instantanée</p>
+                  <p className="font-semibold text-black dark:text-white">Arrivée instantanée</p>
                   <p className="text-sm text-slate-700 dark:text-slate-300">Quelques secondes</p>
                 </div>
               </div>
