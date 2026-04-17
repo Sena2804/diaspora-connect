@@ -10,7 +10,7 @@ import { ArrowRight } from 'lucide-react'
  */
 const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-sky-50 via-cyan-100 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center px-4 py-20 relative overflow-hidden text-slate-950 dark:text-slate-100">
+    <section className="min-h-screen bg-gradient-to-br from-sky-50 via-cyan-100 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 flex items-center justify-center px-4 py-20 relative text-slate-950 dark:text-slate-100">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <span className="absolute top-10 left-8 h-40 w-40 rounded-full bg-emerald/20 blur-3xl animate-blob" />
         <span className="absolute top-24 right-24 h-52 w-52 rounded-full bg-white/60 blur-3xl animate-blob delay-2000 dark:bg-slate-700/60" />
